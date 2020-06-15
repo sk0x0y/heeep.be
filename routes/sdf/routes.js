@@ -1,10 +1,8 @@
 const express = require('express');
+const controller = require('./controller');
 
 const router = express.Router();
 
-/* GET home page. */
-router.get('/', (req, res) => {
-  res.status(404).end('Not Allowed');
-});
+router.route('').get(controller.get);
 
 module.exports = router;
